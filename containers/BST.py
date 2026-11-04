@@ -86,6 +86,13 @@ class BST(BinaryTree):
         HINT:
         Create a staticmethod helper function following the pattern of _is_bst_satisfied.
         '''
+        if self.root is None:
+            self.root = Node(value)
+        else:
+            BST._insert(value, self.root)
+
+    @staticmethod
+    def _insert(value, node):
         if value < node.value:
             if node.left is None:
                 node.left = Node(value)

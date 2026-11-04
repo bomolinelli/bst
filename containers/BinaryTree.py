@@ -131,7 +131,7 @@ class BinaryTree():
         FIXME:
         Implement this function by modifying the _print functions above.
         '''
-         if start:
+        if start:
             traversal = self.inorder(start.left, traversal)
             traversal.append(start.value)
             traversal = self.inorder(start.right, traversal)
