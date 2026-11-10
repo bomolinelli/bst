@@ -57,9 +57,6 @@ class BST(BinaryTree):
         return self.to_list('inorder') == t2.to_list('inorder')
 
     def __iter__(self):
-        '''
-        Iterating over the tree gives its values in sorted order.
-        '''
         return iter(self.to_list('inorder'))
 
     def is_bst_satisfied(self):

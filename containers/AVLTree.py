@@ -115,11 +115,6 @@ class AVLTree(BST):
 
     @staticmethod
     def _insert(value, node):
-        '''
-        Inserts value below node like a normal BST insert,
-        then rebalances each node on the way back up the tree.
-        Returns the (possibly new) root of this subtree.
-        '''
         if node is None:
             return Node(value)
         if value < node.value:
